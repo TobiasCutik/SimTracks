@@ -5,7 +5,7 @@
 
 void UTrackArrowUI::SetArrowLineHeight(float Height)
 {
-	FVector2D ImageSize = ArrowLine->Brush.ImageSize;
+	FVector2D ImageSize = ArrowLine->GetBrush().ImageSize;
 	ImageSize.Y = Height;
 
 	ArrowLine->SetDesiredSizeOverride(ImageSize);
@@ -13,5 +13,5 @@ void UTrackArrowUI::SetArrowLineHeight(float Height)
 
 FVector2D UTrackArrowUI::GetArrowHeadImageSize() const
 {
-	return ArrowHead->Brush.ImageSize;
+	return ArrowHead->GetBrush().ImageSize;
 }

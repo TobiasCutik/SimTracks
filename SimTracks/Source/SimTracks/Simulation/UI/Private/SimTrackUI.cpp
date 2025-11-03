@@ -21,7 +21,7 @@ void USimTrackUI::SetWidth(float Width)
 
 float USimTrackUI::GetWidth() const
 {
-	return SizeBox->WidthOverride;
+	return SizeBox->GetWidthOverride();
 }
 
 void USimTrackUI::SetName(FText Name)
@@ -31,7 +31,7 @@ void USimTrackUI::SetName(FText Name)
 
 float USimTrackUI::GetHeight() const
 {
-	return SizeBox->HeightOverride;
+	return SizeBox->GetHeightOverride();
 }
 
 void USimTrackUI::SetActiveVisually(bool bActive)

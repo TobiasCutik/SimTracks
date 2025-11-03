@@ -8,6 +8,10 @@ public class SimTracks : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
+		CppStandard = CppStandardVersion.Cpp20;
+		DefaultBuildSettings = BuildSettingsVersion.V5;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
+		
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "SlateCore" });

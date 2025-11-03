@@ -14,7 +14,7 @@ bool UTrackSliderUI::Initialize()
 	Slider->OnValueChanged.AddDynamic(this, &UTrackSliderUI::OnTrackSliderChanged);
 
 	CursorBodySlot = Cast<UVerticalBoxSlot>(CursorBody->Slot);
-	DefaultCursorBodyPaddingLeft = -CursorBody->Brush.ImageSize.X / 2.f;
+	DefaultCursorBodyPaddingLeft = -CursorBody->GetBrush().ImageSize.X / 2.f;
 
 	return true;
 }
@@ -83,7 +83,7 @@ void UTrackSliderUI::UpdateCursorBodyPosition() const
 	if (!CursorBodySlot)
 		return;
 
-	const float TimelinePercentage = Slider->GetValue() / Slider->MaxValue;
+	const float TimelinePercentage = Slider->GetValue() / Slider->GetMaxValue();
 	const float SliderPosition = TimelinePercentage * ScreenWidth;
 
 	FMargin Margin = FMargin();
