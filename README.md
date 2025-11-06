@@ -13,7 +13,7 @@ https://youtu.be/IanIqjfQgKI
 
 ## How to include own simulations
 
-In this repository, there is a sample epedemic simulation used, but you can include also any other simulation.
+In this repository, there is a sample epidemic simulation used, but you can include also any other simulation.
 
 It is recommended to provide a deterministic simulation, otherwise there may occur inconsistencies within simulation runs and when evaluating their performances.
 Also, it should not depend on Unreal Engine's ``Tick()``, as it is frame rate dependent and therefore somewhat inconsistent.
